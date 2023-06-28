@@ -71,7 +71,7 @@ public class Main {
         else {
             Connection connection = null;
             try {
-                connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/weather-database", "root", "2awftQ&btm");
+                connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/weather-database", "root", "1234");
                 Statement statement = connection.createStatement();
                 String sqlString = "INSERT INTO forecasts(fcDate, fcTemp) VALUES (CURDATE(), '" + fc + "')";
                 statement.executeUpdate(sqlString);
@@ -86,7 +86,7 @@ public class Main {
     public static void outputDatabase() {
         Connection connection = null;
         try {
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/weather-database", "root", "2awftQ&btm");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/weather-database", "root", "1234");
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("select * from forecasts");
 
